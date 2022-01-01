@@ -17,8 +17,8 @@ namespace LogoKaresz
 		{
 			Balra_Vonalcsillag(hossz / 2, 3, 60, szint);
 
-            for (int i = 0; i < 3; i++)//#ism#//
-            {
+            for (int i = 0; i < 3; i++)/*#ism#*/
+			{
 				Szakasz(hossz, szint);
 				Menj_ide_fraktálozni(hossz/2, hossz, szint);
 				Balra(120);
@@ -38,8 +38,8 @@ namespace LogoKaresz
             {
 				Tollszín(szint);
 				Balra_Vonalcsillag(hossz / 4, 4, 45, szint);
-                for (int i = 0; i < 4; i++)//#ism#//
-                {
+                for (int i = 0; i < 4; i++)/*#ism#*/
+				{
 					Szakasz(hossz / 2, szint);
 					Menj_ide_fraktálozni(hossz / 4, hossz / 3, szint - 1);
 					Balra(90);
@@ -47,7 +47,7 @@ namespace LogoKaresz
 			}
         }
 
-        void Vonalcsillag(double hossz, int db, int szint) { double fok = 360 / db; for (int i = 0; i < db; i++) { Szakasz(hossz, szint); Balra(fok); } }
+        void Vonalcsillag(double hossz, int db, int szint) { double fok = 360 / db; for (int i = 0; i < db; i++)/*#ism#*/ { Szakasz(hossz, szint); Balra(fok); } }
         void Balra_Vonalcsillag(double hossz, int db, double fok, int szint) { Balra(fok); Vonalcsillag(hossz, db, szint); Jobbra(fok); }
 		void Szakasz(double ennyit, int szint) { Tollszín(szint); Előre(ennyit); Hátra(ennyit); }
     }
